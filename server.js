@@ -51,7 +51,7 @@ function getTomorrowStr() {
 async function downloadLineImage(messageId) {
   const blob = await lineClient.getMessageContent(messageId)
   const arrayBuffer = await blob.arrayBuffer()
-  return Buffer.from(arrayBuffer).toString('base64')
+   return Buffer.from(arrayBuffer).toString('base64')
 }
 
 // ── Core: Generate outfit suggestion via Gemini ───────────────────────────────
