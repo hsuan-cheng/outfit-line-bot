@@ -1,0 +1,18 @@
+{
+  "name": "outfit-line-bot",
+  "version": "1.0.0",
+  "description": "穿搭小助手 LINE Bot - daily outfit push",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "@line/bot-sdk": "^9.4.0",
+    "express": "^4.19.2",
+    "node-cron": "^3.0.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
