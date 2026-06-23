@@ -14,7 +14,7 @@ const lineConfig = {
   channelAccessToken: process.env.LINE_CHANNEL_ACCESS_TOKEN || '',
 }
 
-const lineClient = new line.messagingApi.MessagingApiClient({
+const lineBlobClient = new line.messagingApi.MessagingApiBlobClient({
   channelAccessToken: lineConfig.channelAccessToken,
 })
 
@@ -49,7 +49,7 @@ function getTomorrowStr() {
 
 // Download image from LINE content server
 async function downloadLineImage(messageId) {
-  const blob = await lineClient.getMessageContent(messageId)
+  const blob = await lineBlobClient.getMessageContent(messageId)
   const arrayBuffer = await blob.arrayBuffer()
    return Buffer.from(arrayBuffer).toString('base64')
 }
